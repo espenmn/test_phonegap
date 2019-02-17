@@ -2,21 +2,21 @@
 <widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>test phonegap</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Recycle sample.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="post@medialog.no" href="http://www.medialog.no">
+        Espen Moe-Nilssen
     </author>
     <content src="index.html" />
     
-    <preference name="DisallowOverscroll" value="true" />
+    <!--preference name="DisallowOverscroll" value="true" /-->
     <preference name="android-minSdkVersion" value="14" />
     <!-- add a version here, otherwise PGB will use whatever the latest version of the package on npm is -->
-    <plugin name="phonegap-plugin-barcodescanner" />
+    <!--plugin name="phonegap-plugin-barcodescanner" /-->
     <plugin name="cordova-plugin-barcodescanner" />
     <!--plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" /-->
     <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" />
-    <plugin name="cordova-plugin-dialogs" source="npm" spec="~1.2.0" />
+    <!--plugin name="cordova-plugin-dialogs" source="npm" spec="~1.2.0" /-->
     
     <!--plugin name="cordova-plugin-media-capture" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.2" />
