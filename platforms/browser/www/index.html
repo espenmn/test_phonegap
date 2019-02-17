@@ -27,10 +27,11 @@
 <body>
     <div class="app">
         <h1 id="title">Recycle</h1>
-            <div id="div1">xxxyyyyyyyyyyyyyyyyyyyyyy Helloe</div>
+
         <input type="text" type="text" id="strekkode" placeholder="Strekkode"/>
         <button id="get_strekkode" class="button">Recycle Info</button>
         <button id="scan_strekkode" class="button">Skan strekkode</button>
+        <div id="div1"></div>
     </div>
 
     <script type="text/javascript">
@@ -47,7 +48,7 @@
     <script>
     $("#get_strekkode").click(function(){
     alert('ajax load');
-    $("#div1").load("https://raw.githubusercontent.com/espenmn/medialog.dutchtheme/master/src/medialog/dutchtheme/theme/fragments/button.pt", function(responseTxt, statusTxt, xhr){
+    $("#div1").load("https://raw.githubusercontent.com/espenmn/test_phonegap/master/www/load_me.html", function(responseTxt, statusTxt, xhr){
         if(statusTxt == "success")
             alert("External content loaded successfully!");
             alert (responseTxt);
