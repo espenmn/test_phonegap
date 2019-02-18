@@ -28,7 +28,7 @@ body::after {
 }
 
 
-h1 {
+h1#title {
 	font-size: 30px;
 	opacity: 0.1;
  
@@ -69,8 +69,6 @@ button#get_strekkode.button {
 	line-height: 2.6em;
 }
 
- 
-
 .buxtton {
 	width: 40%;
 	display: inline-block;
@@ -86,36 +84,25 @@ button#get_strekkode.button {
 	 transition: all 0.2s;
 	background-color: whitesmoke;
 	height: 3em;
-}
+} 
 
 .button:hover {
 	 color: #000000;
 	 background-color: #FFFFFF;
 }
 
-@keyframes fade {
-	from { opacity: 1.0;
-}
-
-50% {
-	opacity: 0.4;
-}
-
-to {
-	opacity: 1.0;
-}
-
+div#div1 {
+	width: 80%;
+	margin: 2em auto;
+	padding: 1em;
+	box-sizing: border-box;
+	background:whitesmoke;
+	
 }
  
-@-webkit-keyframes fade {
-	from { opacity: 1.0;
+#div1 h1 {
+	color:  black !important;	
 }
 
-50% {
-	opacity: 0.4;
-}
 
-to {
-	opacity: 1.0;
-}
-}
+ 
