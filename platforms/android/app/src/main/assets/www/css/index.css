@@ -99,7 +99,7 @@ div#div1 {
 }
 
 div#div1 > div {
-	margin: 1em;
+	padding: 1em;
 }
 
 
