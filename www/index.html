@@ -36,34 +36,16 @@
         app.initialize();
     </script>
     <script type="text/javascript">
-    $("#get_strekkode1").click( function() {
-        var url = "http://www.medialog.no/" + $("#strekkode").val();
-        alert (url);
-        var ref = cordova.InAppBrowser.open(url, 'location=yes');
-        window.open = cordova.InAppBrowser.open;
-    });
-    </script>
-    <script>
     $("#get_strekkode").click(function(){
-    alert('ajax load');
-    $("#div1").load("https://raw.githubusercontent.com/espenmn/test_phonegap/master/www/load_me.html", function(responseTxt, statusTxt, xhr){
-        if(statusTxt == "success")
-            alert("External content loaded successfully!");
-            alert (responseTxt);
-            //$("#div1").html(responseTxt);
-        if(statusTxt == "error")
-            alert("Error: " + xhr.status + ": " + xhr.statusText);
-    });
-});
-      </script>
-    <script type="text/javascript">  
+    	var url = "https://raw.githubusercontent.com/espenmn/test_phonegap/master/strekkoder/" + $("#strekkode").val();
+    	displayText(url);
+	});
+	
     $("#scan_strekkode").click( function() {  
         cordova.plugins.barcodeScanner.scan(
           function (result) {
-            alert(result.text);
-            var url = "http://www.medialog.no/" + result.text;
-            var ref = cordova.InAppBrowser.open(url, 'location=yes');
-            window.open = cordova.InAppBrowser.open;
+            var url = "https://raw.githubusercontent.com/espenmn/test_phonegap/master/strekkoder/" + result.text;
+            displayText(url);
           },
           function (error) {
               alert("Scanning failed: " + error);
@@ -83,6 +65,30 @@
           }
        );
     });
+    
+    
+    function displayText(url) {
+  	    $("#div1").load(url, function(responseTxt, statusTxt, xhr){
+        if(statusTxt == "success")
+            alert("External content loaded successfully!");
+        if(statusTxt == "error")
+            displayError();
+    	});
+    };
+		
+	function displayError() {
+  	    $("#div1").load('error.html', function(responseTxt, statusTxt, xhr){
+        if(statusTxt == "success")
+            alert("External content loaded successfully!");
+        if(statusTxt == "error")
+            alert("Error: " + xhr.status + ": " + xhr.statusText);
+    	});
+    };
     </script>
 </body>
 </html>
+
+
+	
+
+

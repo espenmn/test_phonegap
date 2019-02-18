@@ -26,12 +26,15 @@
         <param name="onload" value="true" />
     </feature>
     <allow-navigation href="cdvfile:*" />
+    <feature name="BarcodeScanner">
+        <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
+    </feature>
     <name>test phonegap</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Recycle sample.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="post@medialog.no" href="http://www.medialog.no">
+        Espen Moe-Nilssen
     </author>
     <content src="index.html" />
     <access origin="http://www.medialog.no" />
@@ -56,9 +59,5 @@
     <splash density="port-xxxhdpi" src="www/res/screen/android/drawable-port-xxxhdpi-screen.png" />
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
-    <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
-    <feature name="BarcodeScanner">
-        <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
-    </feature>
 </widget>

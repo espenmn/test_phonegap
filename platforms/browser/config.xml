@@ -11,14 +11,13 @@
     </feature>
     <name>test phonegap</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Recycle sample.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="post@medialog.no" href="http://www.medialog.no">
+        Espen Moe-Nilssen
     </author>
     <content src="index.html" />
     <access origin="http://www.medialog.no" />
     <allow-intent href="http://www.medialog.no" />
-    <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
 </widget>
