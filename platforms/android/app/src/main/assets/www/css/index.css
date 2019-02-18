@@ -99,7 +99,8 @@ div#div1 {
 }
 
 div#div1 > div {
-	padding: 1em;
+	padding: 1.5em;
+	text-align: left;
 }
 
 
@@ -112,5 +113,12 @@ h1.error {
 	color:  red;
 }
  
+p {
+	line-height: 160%;
+}
 
+img {
+	max-width: 100%;
+	height: auto;
+}
  
