@@ -8,16 +8,16 @@
         Espen Moe-Nilssen
     </author>
     <content src="index.html" />
-    
+
     <!--preference name="DisallowOverscroll" value="true" /-->
     <preference name="android-minSdkVersion" value="14" />
     <!-- add a version here, otherwise PGB will use whatever the latest version of the package on npm is -->
     <!--plugin name="phonegap-plugin-barcodescanner" /-->
     <plugin name="cordova-plugin-barcodescanner" />
     <!--plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" /-->
-    <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" />
+    <!--plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" /-->
     <!--plugin name="cordova-plugin-dialogs" source="npm" spec="~1.2.0" /-->
-    
+
     <!--plugin name="cordova-plugin-media-capture" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.2" />
     <plugin name="cordova-plugin-contacts" source="npm" spec="~2.0.1" />
