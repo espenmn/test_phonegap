@@ -39,10 +39,13 @@
     </script>
     <script type="text/javascript">
     $("#get_strekkode").click(function(){
-    	alert('running');
-    	var url = "https://raw.githubusercontent.com/espenmn/test_phonegap/master/www/strekkoder/" + $("#strekkode").val() + ".html";
-    	alert(url);
-    	displayText(url);
+    	var strekkode = $("#strekkode").val();
+    	if(strekkode.length == 13){
+    	    var url = "https://raw.githubusercontent.com/espenmn/test_phonegap/master/www/strekkoder/" + strekkode + ".html";
+    		displayText(url);
+		} else {
+ 			alert("Ugyldig kode: Må være 13 siffer");
+		}	
 	});
 	
     $("#scan_strekkode").click( function() {  
