@@ -77,6 +77,8 @@
     
     function displayText(url) {
   	    $("#div1").load(url, function(responseTxt, statusTxt, xhr){
+        if(statusTxt == "success")
+             alert("External content loaded successfully!");
         if(statusTxt == "error")
             displayError();
     	});
