@@ -82,7 +82,9 @@
     };
 		
 	function displayError() {
-		var htmlString = "<h1 class='error'>Strekkode ikke funnet</h1><p><Denne strekkoden er ikke registrert. <br/>Dvs. at vi ikke har informasjon om gjennvinningsprosessen for dette produktet, at det er feilskrevet eller at du er offline.</p>";
+		var htmlString = "<div><h1 class='error'>Strekkode ikke funnet</h1><p><Denne strekkoden er ikke registrert. <br/>Dvs. at vi ikke har informasjon om gjennvinningsprosessen for dette produktet, at det er feilskrevet eller at du er offline.</p></div>";
+		//$("#div1").load("file:///strekkoder/error.html");
+		// alert(htmlString2);
 		$("#div1").html( htmlString );
     };
     </script>
