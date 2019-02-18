@@ -77,7 +77,8 @@
     };
 		
 	function displayError() {
-  	    $("#div1").load('error.html', function(responseTxt, statusTxt, xhr){
+		alert('error');
+  	    $("#div1").load('https://raw.githubusercontent.com/espenmn/test_phonegap/master/strekkoder/error.html', function(responseTxt, statusTxt, xhr){
         if(statusTxt == "success")
             alert("External content loaded successfully!");
         if(statusTxt == "error")
