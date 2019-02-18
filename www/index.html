@@ -52,6 +52,7 @@
         cordova.plugins.barcodeScanner.scan(
           function (result) {
             var url = "https://raw.githubusercontent.com/espenmn/test_phonegap/master/www/strekkoder/" + result.text + '.html';
+            alert(url);
             displayText(url);
           },
           function (error) {
