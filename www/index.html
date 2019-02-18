@@ -25,7 +25,7 @@
 </head>
 <body>
     <div class="app">
-        <h1 id="title">Recycle</h1>
+        <h1 id="title">Gjennvinn / Recycle</h1>
         <div id="input_strekkode">
         	<input type="text" type="text" id="strekkode" placeholder="Skriv Strekkode"/>
         	<button id="get_strekkode" class="button"> > </button>
@@ -39,14 +39,14 @@
     </script>
     <script type="text/javascript">
     $("#get_strekkode").click(function(){
-    	var url = "https://raw.githubusercontent.com/espenmn/test_phonegap/master/strekkoder/" + $("#strekkode").val();
+    	var url = "https://raw.githubusercontent.com/espenmn/test_phonegap/master/strekkoder/" + $("#strekkode").val() + '.html';
     	displayText(url);
 	});
 	
     $("#scan_strekkode").click( function() {  
         cordova.plugins.barcodeScanner.scan(
           function (result) {
-            var url = "https://raw.githubusercontent.com/espenmn/test_phonegap/master/strekkoder/" + result.text;
+            var url = "https://raw.githubusercontent.com/espenmn/test_phonegap/master/strekkoder/" + result.text + '.html';
             displayText(url);
           },
           function (error) {
