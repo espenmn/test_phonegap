@@ -26,9 +26,11 @@
 <body>
     <div class="app">
         <h1 id="title">Recycle</h1>
-        <input type="text" type="text" id="strekkode" placeholder="Strekkode"/>
-        <button id="get_strekkode" class="button">Recycle Info</button>
-        <button id="scan_strekkode" class="button">Skan strekkode</button>
+        <div id="input_strekkode">
+        	<input type="text" type="text" id="strekkode" placeholder="Skriv Strekkode"/>
+        	<button id="get_strekkode" class="button"> > </button>
+        </div>
+        <button id="scan_strekkode" class="button">Eller Skan strekkode</button>
         <div id="div1"></div>
     </div>
 
@@ -69,18 +71,15 @@
     
     function displayText(url) {
   	    $("#div1").load(url, function(responseTxt, statusTxt, xhr){
-        if(statusTxt == "success")
-            alert("External content loaded successfully!");
         if(statusTxt == "error")
             displayError();
     	});
     };
 		
 	function displayError() {
-		alert('error');
-  	    $("#div1").load('https://raw.githubusercontent.com/espenmn/test_phonegap/master/strekkoder/error.html', function(responseTxt, statusTxt, xhr){
+		$("#div1").load('https://raw.githubusercontent.com/espenmn/test_phonegap/master/www/strekkoder/error.html', function(responseTxt, statusTxt, xhr){
         if(statusTxt == "success")
-            alert("External content loaded successfully!");
+            // alert("External content loaded successfully!");
         if(statusTxt == "error")
             alert("Error: " + xhr.status + ": " + xhr.statusText);
     	});
