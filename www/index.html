@@ -79,7 +79,7 @@
     		7048840000012: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
     		7048840000029: "https://sortere.no/privat/produkttype/516/Melkekartong .first",  
     		};
-    	var url = urls[strekkode] || '';
+    	var url = urls[strekkode] || 'strekkoder/error.html';
     	if (url != undefined) {
     	    $("#div1").load(url, function(responseTxt, statusTxt, xhr){
   	        if(statusTxt == "error")
