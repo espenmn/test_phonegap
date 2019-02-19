@@ -41,8 +41,8 @@
     $("#get_strekkode").click(function(){
     	var strekkode = $("#strekkode").val();
     	if(strekkode.length == 13){
-    	    var url = "https://raw.githubusercontent.com/espenmn/test_phonegap/master/www/strekkoder/" + strekkode + ".html";
-    		displayText(url);
+    	    //var url = "https://raw.githubusercontent.com/espenmn/test_phonegap/master/www/strekkoder/" + strekkode + ".html";
+    		displayText(strekkode);
 		} else {
  			alert("Ugyldig kode: Må være 13 siffer");
 		}	
@@ -73,10 +73,18 @@
        );
     });
     
-    
-    function displayText(url) {
+    function displayText(strekkode) {
+    	var urls = { 
+    		7038010000065: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
+    		7048840000012: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
+    		7048840000029: "https://sortere.no/privat/produkttype/516/Melkekartong .first",  
+    		};
+    	//alert(strekkode);
+    	//alert(urls[strekkode]);
+    	var url = (urls[strekkode]);
+    	//alert(url)
   	    $("#div1").load(url, function(responseTxt, statusTxt, xhr){
-  	    //alert(statusTxt, xhr);
+  	    //alert(responseTxt, statusTxt, xhr);
         if(statusTxt == "error")
             displayError();
     	});
