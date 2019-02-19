@@ -76,16 +76,14 @@
     
     function displayText(url) {
   	    $("#div1").load(url, function(responseTxt, statusTxt, xhr){
-  	    alert(statusTxt, xhr);
+  	    //alert(statusTxt, xhr);
         if(statusTxt == "error")
             displayError();
     	});
     };
 		
 	function displayError() {
-		var htmlString = "<div><h1 class='error'>Strekkode ikke funnet</h1><p><Denne strekkoden er ikke registrert. <br/>Dvs. at vi ikke har informasjon om gjennvinningsprosessen for dette produktet, at det er feilskrevet eller at du er offline.</p></div>";
-		//$("#div1").load("file:///strekkoder/error.html");
-		// alert(htmlString2);
+		var htmlString = "<div><h1 class='error'>Ikke funnet</h1><p><Denne strekkoden er ikke registrert. <br/>Dvs. at vi ikke har informasjon om gjennvinningsprosessen for dette produktet, at det er feilskrevet eller at du er offline.</p></div>";
 		$("#div1").html( htmlString );
     };
     </script>
