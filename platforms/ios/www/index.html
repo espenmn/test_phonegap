@@ -25,10 +25,12 @@
 </head>
 <body>
     <div class="app">
-        <h1 id="title">Recycle</h1>
-        <input type="text" type="text" id="strekkode" placeholder="Strekkode"/>
-        <button id="get_strekkode" class="button">Recycle Info</button>
-        <button id="scan_strekkode" class="button">Skan strekkode</button>
+        <h1 id="title">Gjennvinn / Recycle</h1>
+        <div id="input_strekkode">
+        	<input type="text" type="text" id="strekkode" placeholder="Skriv Strekkode"/>
+        	<button id="get_strekkode" class="button"> > </button>
+        </div>
+        <button id="scan_strekkode" class="button">Eller Skan strekkode</button>
         <div id="div1"></div>
     </div>
 
@@ -36,34 +38,21 @@
         app.initialize();
     </script>
     <script type="text/javascript">
-    $("#get_strekkode1").click( function() {
-        var url = "http://www.medialog.no/" + $("#strekkode").val();
-        alert (url);
-        var ref = cordova.InAppBrowser.open(url, 'location=yes');
-        window.open = cordova.InAppBrowser.open;
-    });
-    </script>
-    <script>
     $("#get_strekkode").click(function(){
-    alert('ajax load');
-    $("#div1").load("https://raw.githubusercontent.com/espenmn/test_phonegap/master/www/load_me.html", function(responseTxt, statusTxt, xhr){
-        if(statusTxt == "success")
-            alert("External content loaded successfully!");
-            alert (responseTxt);
-            //$("#div1").html(responseTxt);
-        if(statusTxt == "error")
-            alert("Error: " + xhr.status + ": " + xhr.statusText);
-    });
-});
-      </script>
-    <script type="text/javascript">  
+    	var strekkode = $("#strekkode").val();
+    	if(strekkode.length == 13){
+    	    var url = "https://raw.githubusercontent.com/espenmn/test_phonegap/master/www/strekkoder/" + strekkode + ".html";
+    		displayText(url);
+		} else {
+ 			alert("Ugyldig kode: Må være 13 siffer");
+		}	
+	});
+	
     $("#scan_strekkode").click( function() {  
         cordova.plugins.barcodeScanner.scan(
           function (result) {
-            alert(result.text);
-            var url = "http://www.medialog.no/" + result.text;
-            var ref = cordova.InAppBrowser.open(url, 'location=yes');
-            window.open = cordova.InAppBrowser.open;
+            var url = "https://raw.githubusercontent.com/espenmn/test_phonegap/master/www/strekkoder/" + result.text + '.html';
+            displayText(url);
           },
           function (error) {
               alert("Scanning failed: " + error);
@@ -83,6 +72,27 @@
           }
        );
     });
+    
+    
+    function displayText(url) {
+  	    $("#div1").load(url, function(responseTxt, statusTxt, xhr){
+  	    alert(statusTxt, xhr);
+        if(statusTxt == "error")
+            displayError();
+    	});
+    };
+		
+	function displayError() {
+		var htmlString = "<div><h1 class='error'>Strekkode ikke funnet</h1><p><Denne strekkoden er ikke registrert. <br/>Dvs. at vi ikke har informasjon om gjennvinningsprosessen for dette produktet, at det er feilskrevet eller at du er offline.</p></div>";
+		//$("#div1").load("file:///strekkoder/error.html");
+		// alert(htmlString2);
+		$("#div1").html( htmlString );
+    };
     </script>
 </body>
 </html>
+
+
+	
+
+

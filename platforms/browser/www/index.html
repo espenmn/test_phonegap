@@ -76,6 +76,7 @@
     
     function displayText(url) {
   	    $("#div1").load(url, function(responseTxt, statusTxt, xhr){
+  	    alert(statusTxt, xhr);
         if(statusTxt == "error")
             displayError();
     	});
