@@ -1,6 +1,6 @@
 ## Contributing
 
-Thank you for your interest in contributing to the Hello World PhoneGap Template.
+Thank you for your interest in contributing.
 
 #### Issues
 
@@ -18,5 +18,5 @@ All contributions (feature or bug fix) should start with an issue first.
 - Open a [Pull Request][pull-request]
 
 
-[issue-tracker]: https://github.com/phonegap/phonegap-template-hello-world/issues
-[pull-request]: https://github.com/phonegap/phonegap-template-hello-world/pulls
+[issue-tracker]: https://github.com/espenmn/test_phonegap/issues
+[pull-request]: https://github.com/espenmn/test_phonegap/issues/pulls
