@@ -1,4 +1,5 @@
 var urls = { 
+    7048840000029: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
 	7038010000029: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
 	7038010000065: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
 	7048840000012: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
