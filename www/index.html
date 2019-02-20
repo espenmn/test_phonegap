@@ -22,6 +22,7 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="data.js"></script>
 </head>
 <body>
     <div class="app">
@@ -41,8 +42,7 @@
     $("#get_strekkode").click(function(){
     	var strekkode = $("#strekkode").val();
     	if(strekkode.length == 13){
-    	    //var url = "https://raw.githubusercontent.com/espenmn/test_phonegap/master/www/strekkoder/" + strekkode + ".html";
-    		displayText(strekkode);
+    	    displayText(strekkode);
 		} else {
  			alert("Ugyldig kode: Må være 13 siffer");
 		}	
@@ -75,25 +75,6 @@
     
     function displayText(strekkode) {
         $("#div1").html( "" );
-    	var urls = { 
-    		7038010000029: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
-    		7038010000065: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
-    	    7048840000012: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
-            7038010000072: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
-            7038010000980: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
-            7038010001642: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
-            7038010001659: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
-            7038010001918: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
-            7038010002625: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
-            7038010054730: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
-            7038010054822: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
-            7048010000012: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
-            7048840000036: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
-            7048840000500: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
-            7048840090150: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
-            7048840090174: "https://sortere.no/privat/produkttype/516/Melkekartong .first",
-            7090006470160: "https://sortere.no/privat/produkttype/516/Melkekartong .first", 
-    		};
     	var url = urls[strekkode] || 'strekkoder/error.html';
     	if (url != undefined) {
     	    $("#div1").load(url, function(responseTxt, statusTxt, xhr){

@@ -59,9 +59,9 @@
     <feature name="InAppBrowser">
         <param name="ios-package" value="CDVInAppBrowser" />
     </feature>
-    <name>test phonegap</name>
+    <name>gjennvinningsapp</name>
     <description>
-        Recycle sample.
+        Gjennvinningapp
     </description>
     <author email="post@medialog.no" href="http://www.medialog.no">
         Espen Moe-Nilssen
@@ -71,9 +71,7 @@
     <allow-intent href="*" />
     <icon height="57" platform="ios" src="www/res/icon/ios/icon.png" width="57" />
     <icon height="114" platform="ios" src="www/res/icon/ios/icon@2x.png" width="114" />
-    <icon height="40" platform="ios" src="www/res/icon/ios/icon-40.png" width="40" />
     <icon height="80" platform="ios" src="www/res/icon/ios/icon-40@2x.png" width="80" />
-    <icon height="50" platform="ios" src="www/res/icon/ios/icon-50.png" width="50" />
     <icon height="100" platform="ios" src="www/res/icon/ios/icon-50@2x.png" width="100" />
     <icon height="60" platform="ios" src="www/res/icon/ios/icon-60.png" width="60" />
     <icon height="120" platform="ios" src="www/res/icon/ios/icon-60@2x.png" width="120" />

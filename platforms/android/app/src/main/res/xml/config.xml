@@ -29,9 +29,9 @@
     <feature name="BarcodeScanner">
         <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
     </feature>
-    <name>test phonegap</name>
+    <name>gjennvinningsapp</name>
     <description>
-        Recycle sample.
+        Gjennvinningapp
     </description>
     <author email="post@medialog.no" href="http://www.medialog.no">
         Espen Moe-Nilssen
